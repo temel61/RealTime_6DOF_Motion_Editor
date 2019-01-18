@@ -1,0 +1,805 @@
+  350 Mike C. Fletcher	2010-02-22 {release-3.0.1}
+      Version bump for OpenGL_accelerate
+
+  349 Mike C. Fletcher	2010-02-22
+      Some whitespace issues...
+
+  348 Mike C. Fletcher	2010-02-22
+      SF#2935298 force shader sources into list form before conversion
+
+  347 Mike C. Fletcher	2010-02-22
+      Test for SF#2946226
+
+  346 Mike C. Fletcher	2010-01-25
+      SF#2939786 fix type declarations for the glColor dispatch code
+
+  345 Mike C. Fletcher	2009-12-21 {release-3.0.1b2}
+      Fixes to the late-bind base-classes and users to get test suite passing.
+
+  344 Mike C. Fletcher	2009-12-21
+      Use the latebind cython module to speed up wrapper and lazywrapper modules.
+
+  343 Mike C. Fletcher	2009-12-21
+      Module providing acceleration for wrapper and lazywrapper operations.
+
+  342 Mike C. Fletcher	2009-12-13
+      Restore the original entry-point mechanism
+
+  341 Mike C. Fletcher	2009-12-13
+      Track deprecations along function life-cycle.
+
+  340 Mike C. Fletcher	2009-12-13
+      Declare the argument names for glut callback registration functions
+
+  339 Mike C. Fletcher	2009-12-13
+      Make all lazywrappers sub-classes of the same base class...
+
+  338 Mike C. Fletcher	2009-12-12
+      Explicitly include the license.txt in the OpenGL_accelerate module package.
+
+  337 Mike C. Fletcher	2009-12-12
+      Force manifest regeneration for setup script (accelerate setup)
+
+  336 Mike C. Fletcher	2009-12-11
+      Always rebuild manifest to catch new files.
+
+  335 Mike C. Fletcher	2009-12-11
+      Remove Numarray support
+
+  334 Mike C. Fletcher	2009-12-11
+      Version bump
+
+  333 Mike C. Fletcher	2009-12-11
+      Version bump
+
+  332 Mike C. Fletcher	2009-12-11
+      Add simple test that imports with deprecations turned on.
+
+  331 Mike C. Fletcher	2009-12-11
+      Remove the old deprecations filter module
+
+  330 Mike C. Fletcher	2009-11-25
+      SF#2903797 raise ImportError if there is no GL implementation at all
+      SF#2903797 allow for cases on Win32 or GLX where there is no GLU library (Darwin's GLU is the OpenGL library itself).
+
+  329 Mike C. Fletcher	2009-11-19
+      Eliminate use of callable, reduce un-specified integer divisions, eliminate use of has_key for dictionary checks (reduce python -3 warning messages)
+
+  328 Mike C. Fletcher	2009-11-19
+      Remove use of "callable" in wrapper.pyx (avoid -3 deprecation warning)
+
+  327 Mike C. Fletcher	2009-11-18
+      Regenerated extensions with glGet registrations updated and extension summaries and links moved into wrapper docstring instead of raw docstring.  Links are also now far more likely to be correct.
+
+  326 Mike C. Fletcher	2009-11-18
+      Update glget size registry, update base url for extensions registry
+
+  325 Mike C. Fletcher	2009-11-18
+      Updating array-sizes
+
+  324 Mike C. Fletcher	2009-11-18
+      Convenience module to provide framebuffer_object support using ARB or EXT versions with check function.
+
+  323 Mike C. Fletcher	2009-11-18
+      Add some convenience/consistency aliases for constants
+
+  322 Mike C. Fletcher	2009-11-18
+      Remove accidentally checked in source texts for AMD extensions
+
+  321 Mike C. Fletcher	2009-11-18
+      Missing imports of the lazy wrapper for two extensions.
+
+  320 Mike C. Fletcher	2009-11-18
+      Missing import of the base constant during the registration 
+
+  319 Mike C. Fletcher	2009-11-18
+      Missing declaration of the new GLsync type added.
+
+  318 Mike C. Fletcher	2009-11-14
+      SF#2897786 missing image-format registration for packed depth+stencil buffer format, unfortunately, no tests provided.
+
+  317 Mike C. Fletcher	2009-11-13
+      Experimental vbo mapping code
+
+  316 Mike C. Fletcher	2009-11-10 {release-3.0.1b1}
+      SF#2895081 more constants added for glGet, basically everything that my machine can use, which means it should pretty well cover OpenGL 2.1, but there's not likely to be any support beyond that :( 
+
+  315 Mike C. Fletcher	2009-11-10
+      Aborted attempt to introduce generic defaulted parameters for wrappers...
+
+  314 Mike C. Fletcher	2009-11-10
+      SF#2895081 missing constants for glGet registration added
+
+  313 Mike C. Fletcher	2009-11-10
+      Script to write the changelog, instead of looking up parameters every time
+
+  312 Mike C. Fletcher	2009-11-10
+      Bump version for OpenGL_accelerate.
+      Fix bug in togl.py script for use under Python 2.5 (was attempting to write a directory)
+
+  311 Mike C. Fletcher	2009-11-09
+      A partial import from the accelerator module could cause a complete failure due to a missing entry point
+
+  310 Mike C. Fletcher	2009-11-09
+      Eliminate error-suppression warning when module cleanup happens before vbo cleanup is called.
+
+  309 Mike C. Fletcher	2009-11-09
+      Fix for gluProject on Ubuntu where somehow ctypes returns a None instead of a GLint from the base function
+
+  308 Mike C. Fletcher	2009-11-07
+      Add docstring to the Tk module to let people know that they really should use something else, most likely.
+
+  307 Mike C. Fletcher	2009-11-07
+      Tweaking and commenting togl download script
+
+  306 Mike C. Fletcher	2009-11-07
+      Tk require is needed *before* Tk load to get the Togl widget loaded...
+
+  305 Mike C. Fletcher	2009-11-07
+      Make bzrignore more generic
+
+  304 Mike C. Fletcher	2009-11-07
+      Add Togl license to the license.txt file.
+      Modify Tk submodule to use atexit and work with modern bin-dist Togl, which is Tk-version agnostic, but 64-bit sensitive
+
+  303 Mike C. Fletcher	2009-11-07
+      Update the Togl installer to use modern binary distributions and (hopefully) work for all platforms
+
+  302 Mike C. Fletcher	2009-11-07
+      Add test for gldouble return-arry type registry
+
+  301 Mike C. Fletcher	2009-11-07
+      Fix formatting in a few modules.
+      Eliminate use of glutMainLoop in test that's just intended to test init.
+
+  300 Mike C. Fletcher	2009-11-07
+      Always register *only* instantiated format handler plugins, never their classes.
+
+  299 Mike C. Fletcher	2009-11-07
+      References for constant were off and need the accelerated version
+
+  298 Mike C. Fletcher	2009-11-07
+      Make the OpenGL 3.2 entry points available in OpenGL.GL namespace
+
+  297 Mike C. Fletcher	2009-11-07
+      Regeneration with the fixed generator to make array types match (mostly boolean arrays)
+
+  296 Mike C. Fletcher	2009-11-07
+      Missing AMD directory was preventing getting the post-ATI-era extensions generated
+
+  295 Mike C. Fletcher	2009-11-07
+      Bump version for release this weekend...
+
+  294 Mike C. Fletcher	2009-11-07
+      Make int64 record-types available as arrays and constants when possible
+
+  293 Mike C. Fletcher	2009-11-07
+      Make generation handle a few more data-types, reduce logging level so that warnings are more prominent
+
+  292 Mike C. Fletcher	2009-11-07
+      SF#2844174 with error-checking enabled, was passing status value into function (glGetShaderiv) that didn't allow passing it in, the function now allows it.
+
+  291 Mike C. Fletcher	2009-11-07
+      SF#2882405 patch from Vickenty Fesunov to fix glGetActiveUniform
+
+  290 Mike C. Fletcher	2009-11-07
+      Trigger mainloop in the glut init test.
+
+  289 Mike C. Fletcher	2009-10-01
+      Update docs to show proper types for the shader source strings
+
+  288 Mike C. Fletcher	2009-10-01
+      Add some queries to display context values
+
+  287 Mike C. Fletcher	2009-09-11 {release-3.0.1a4}
+      Version bump for release
+
+  286 Mike C. Fletcher	2009-09-11
+      Updates from spec updates, new extensions, updates of extension definitions (mostly the textual introductions of raw modules)
+
+  285 Mike C. Fletcher	2009-09-01
+      Remove some commented-out code
+
+  284 Mike C. Fletcher	2009-09-01
+      Fix bug reported by Gijs; namely that glBufferData did not allow specifying a size for initializing NULL arrays.
+
+  283 Mike C. Fletcher	2009-08-29
+      Convert all tabs to 4-spaces in all Python files.
+
+  282 Mike C. Fletcher	2009-08-29
+      Convert tabs to 4 spaces in test suite
+
+  281 Mike C. Fletcher	2009-08-29
+      At Rene's request, eliminate use of tabs in favour of spaces (for the raw modules, here)
+
+  280 Mike C. Fletcher	2009-08-27
+      Rework deprecation mechanism to use the header-file deprecation declarations to generate deprecation of entry points.
+
+  279 Mike C. Fletcher	2009-08-27
+      Catch conversion failures in voidDataPointer methods (error report from renaud blanch)
+
+  278 Mike C. Fletcher	2009-08-27
+      Patch from Ben de Luca to add GL_OBJECT_ACTIVE_UNIFORMS to GL_2_0 module
+
+  277 Mike C. Fletcher	2009-08-18
+      Update extensions from the OpenGL registry (OpenGL 3.2 support)
+
+  276 Mike C. Fletcher	2009-08-18
+      Add GL_ if missing
+
+  275 Mike C. Fletcher	2009-08-18
+      Fix download URL (SF downloads still seem broken :( ).
+      Add glReadBuffer() test.
+
+  274 Mike C. Fletcher	2009-08-13 {release-3.0.1a3}
+      Bump version for next release
+
+  273 Mike C. Fletcher	2009-08-13
+      Make the two functions visible on imports
+
+  272 Mike C. Fletcher	2009-08-13
+      Bug report from Joshua Davis, the alternate function is using the wrong operation to do validity queries, apparently ARB->core didn't keep the function name constant here :( .
+
+  271 Mike C. Fletcher	2009-08-11
+      Provide a Python 2.5+ context manager for shader programs created by compileShader()
+
+  270 Mike C. Fletcher	2009-08-11
+      Add Python 2.5+ context-manager method to vbo.VBO objects.
+
+  269 Mike C. Fletcher	2009-08-03
+      Update download link on sourceforge
+
+  268 Mike C. Fletcher	2009-08-02 {release-3.0.1a2} [merge]
+      SF#2829309, turns out that the first test case interferes with the second test case, since the second is the test-as-required, using that instead, *should* now pass on Win32 as well as Linux.
+
+  267 Mike C. Fletcher	2009-08-02
+      Win32 platform doesn't support symlinks (duh!), removing symlink to license.txt
+
+  266 Mike C. Fletcher	2009-08-02
+      Remove useless exclusions from manifest for OpenGL_accelerate
+
+  265 Mike C. Fletcher	2009-08-02
+      Link license.txt into OpenGL_accelerate module 
+
+  264 Mike C. Fletcher	2009-08-02
+      Clean out old/unused code from the src sub-directory of the project.
+
+  263 Mike C. Fletcher	2009-08-02
+      Current OpenGL.org glext.h processed to pick up OpenGL 3.1 entry points, a number of changes in the header file caused required small changes to the raw modules (deprecated functionality is now separately defined from non-deprecated functionality).
+      New auto-generated extensions added from APPLE, ARB and EXT
+
+  262 Mike C. Fletcher	2009-08-02
+      Import OpenGL 3.1 functionality into the root OpenGL.GL namespace
+
+  261 Mike C. Fletcher	2009-08-02
+      Updated extension generation script to deal with current downloadable glext.h from OpenGL.org.
+
+  260 Mike C. Fletcher	2009-08-02
+      Remove spec for including .c/.pyx from the src directory (no longer exists)
+
+  259 Mike C. Fletcher	2009-08-02
+      Bump version for second alpha release
+
+  258 Mike C. Fletcher	2009-08-02
+      Update accelerate description, remove extraneous ',' after call to glRenderMode() in test suite
+
+  257 Mike C. Fletcher	2009-08-02
+      Move mode-setting in glCallLists test before identity set
+
+  256 Mike C. Fletcher	2009-07-30
+      SF#2829309 another test to attempt to isolate the problem
+
+  255 Mike C. Fletcher	2009-07-30
+      SF#2829309 test against declared behaviour, not replicated
+
+  254 Mike C. Fletcher	2009-07-26
+      Allow glCallLists to accept raw/traditional parameters as well
+
+  253 Mike C. Fletcher	2009-07-25
+      Fix accelerate build to make OpenGL_accelerate available as a sub-namespace, so that cimports work.
+
+  252 Mike C. Fletcher	2009-07-25
+      Regenerated cython wrappers with new location in the source tree
+
+  251 Mike C. Fletcher	2009-07-25
+      Missing import for error handler in vbo fix
+
+  250 Mike C. Fletcher	2009-07-25
+      Bug report from Dan Helfman (explicit delete of buffers prints error warning)
+
+  249 Mike C. Fletcher	2009-07-25
+      Fix OpenGL.arrays.vbo.VBO.delete to allow for explicit deletion without causing issues with gc-based deletion
+
+  248 Mike C. Fletcher	2009-07-24
+      Log the accelerate error too.
+
+  247 Mike C. Fletcher	2009-07-24
+      Prefer sys.platform to os.name for platform plugin lookup (error report from renaud blanch for os-x).
+      Log whether we loaded accelerate or not.
+
+  246 Mike C. Fletcher	2009-07-20 {release-3.0.1a1} [merge]
+      Merge changes required to work on Win32 2.5.4 where numpy scalar uint* types don't work when passed to ctypes c_uint* types.
+
+  245 Mike C. Fletcher	2009-07-20
+      Make sdist for OpenGL_accelerate always build by tar and zip
+
+  244 Mike C. Fletcher	2009-07-20
+      Get OpenGL_accelerate building as a separate source distribution/project.
+
+  243 Mike C. Fletcher	2009-07-20
+      Make OpenGL_accelerate better isolated/contained.
+
+  242 Mike C. Fletcher	2009-07-20
+      Update manifest to include changelog
+
+  241 Mike C. Fletcher	2009-07-20
+      Make the source and return-code available in the RuntimeError raised on shader compilation failure
+
+  240 Mike C. Fletcher	2009-07-19
+      Make shader compile error show you what code failed
+
+  239 Mike C. Fletcher	2009-07-19
+      SF#1311265 Allow passing in the array for glReadPixels
+
+  238 Mike C. Fletcher	2009-07-18
+      Use the same (lazy) wrapper for all glDrawBuffer wrappers, this wrapper allows copying when copying is enabled and will calculate n from bufs if n is omitted.
+
+  237 Mike C. Fletcher	2009-07-18
+      Provide a copy-capable wrapper for glDrawBuffers
+
+  236 Mike C. Fletcher	2009-07-18
+      Add trivial-case tests for glut init
+
+  235 Mike C. Fletcher	2009-07-18
+      SF#2354596 pass tessellation combine results back to caller
+
+  234 Mike C. Fletcher	2009-07-18
+      Whitespace reformat
+
+  233 Mike C. Fletcher	2009-07-18
+      Multiple tests from SF error reports added
+
+  232 Mike C. Fletcher	2009-07-18
+      SF#2152623 support use of GL_BITMAP in glDrawPixels
+
+  231 Mike C. Fletcher	2009-07-18
+      SF#2561765 fix incorrect handling of "tightly packed" pixel formats where the image handling was incorrectly creating arrays of the packed format for each pixel, rather than treating the packed value as a single element.
+
+  230 Mike C. Fletcher	2009-07-18
+      Missing the license in the source archives
+
+  229 Mike C. Fletcher	2009-07-18
+      Make the font-load error a warning, rather than just info
+
+  228 Mike C. Fletcher	2009-07-18
+      Eliminate use of print in error logging (use logging module), only log if GLUT is actually loaded
+
+  227 Mike C. Fletcher	2009-07-18
+      Framebuffer wrappers (ARB and EXT) enhanced, test for framebuffer deletion added (SF#2727274)
+
+  226 Mike C. Fletcher	2009-07-18
+      Freeglut import shouldn't raise errors, so HAVE_FREEGLUT was always assigned True, should be closer to a real check now.
+
+  225 Mike C. Fletcher	2009-07-18
+      Add constants defined for newer freeglut versions SF#2813722
+
+  224 Mike C. Fletcher	2009-07-18
+      Only use the WithExit operations if they are non-null, addresses SF#2813722
+
+  223 Mike C. Fletcher	2009-07-18
+      Attempt to load freeglut from common freeglut lib names, if available.
+
+  222 Mike C. Fletcher	2009-07-18
+      Add top-level flag CONTEXT_CHECKING when enabled, PyOpenGL will issue error on GL, GLU, or GLE functions which are called before there is a valid context.  This flag is disabled by default and will have a large negative impact on performance, it is intended to be used for tracking down segfaults due to use of these entry points before there is a valid context, such code should be fixed.
+
+  221 Mike C. Fletcher	2009-07-18
+      Update OpenGL/GL/shaders.py documentation
+
+  220 Mike C. Fletcher	2009-07-18
+      OpenGL.GL.shaders compileShader error-checking on the shader during compilation
+
+  219 Mike C. Fletcher	2009-07-18
+      Fix constants in OpenGL.GL.shaders (were strings, are now Constant objects), add convenience methods compileShader and compileProgram to the module.
+
+  218 Mike C. Fletcher	2009-07-17
+      Minor whitespace reformatting
+
+  217 Mike C. Fletcher	2009-07-17
+      Fix usage of ctypes c_void_p values as passed in values for array data-types, were being treated as parameters rather than as pointers, should also fix c_char_p and c_wchar_p if they are used anywhere. (Bug reported by renaud blanch)
+
+  216 Mike C. Fletcher	2009-07-17
+      Eliminate pdb call when image constant's type is invalid (debug code left in)
+
+  215 Mike C. Fletcher	2009-07-09
+      Remove use of non-existant err value
+
+  214 mcfletch	2009-07-09
+      Move common accelerator operations into common module (acceleratesupport), may want to revise this to make client code simpler at some point.
+
+  213 mcfletch	2009-07-09
+      Fix handling of _WGL functions which take HANDLE parameters when an int/long is passed (default return for handle values)
+
+  212 mcfletch	2009-07-08
+      GLUT exit-function fixes (again) for Vista/NT Python 2.5
+
+  211 mcfletch	2009-07-08
+      Code requires a pointer-to-function, not a function object...
+
+  210 Mike C. Fletcher	2009-07-08
+      Eliminate errors when passing lists/tuples to glVertex( ) when error-on-copy is true.
+
+  209 Mike C. Fletcher	2009-07-08
+      Use proper data-type for glSelectBuffer to avoid error-on-copy
+
+  208 Mike C. Fletcher	2009-07-08
+      Remove test code
+
+  207 Mike C. Fletcher	2009-07-08
+      Make numpy handler check data-type in from_param to allow for *just* calling from_param in more cases
+
+  206 Mike C. Fletcher	2009-07-08
+      Remove support for ctypes 0.9.9.3, make ctypes loader log with module dotted name
+
+  205 Mike C. Fletcher	2009-07-08
+      Update license to move fault-tolerance warning to the top of the file.
+      Update dates in license file.
+
+  204 Mike C. Fletcher	2009-07-07
+      Report from Ian Mallet that GL 2.0 function isn't properly created with createBaseFunction (I think).
+
+  203 Mike C. Fletcher	2009-07-06
+      When error-on-copy is true, reduce number of operations invoked for wrapped array functions.
+
+  202 Mike C. Fletcher	2009-07-06
+      Make glGenTextures respect unpack flag.
+      Make glRasterPos work with non-copying mode.
+
+  201 Mike C. Fletcher	2009-07-06
+      Don't do lookup every time we check...
+
+  200 Mike C. Fletcher	2009-07-06
+      Add a few common vector types to the OpenGL.constants modules for use in ERROR_ON_COPY mode
+
+  199 Mike C. Fletcher	2009-07-06
+      Clarify docstrings on shaders module
+
+  198 Mike C. Fletcher	2009-07-06
+      Eliminate "name" namespace polution
+
+  197 Mike C. Fletcher	2009-07-06
+      Raise errors on list dimension retrieval for error-on-copy cases
+
+  196 Mike C. Fletcher	2009-07-06
+      Clarify constants docstring
+
+  195 Mike C. Fletcher	2009-07-06
+      Note ability to disable context data operations with top-level flags in docstrings
+
+  194 Mike C. Fletcher	2009-07-06
+      Add __repr__ and better docstring for lazy wrapper
+
+  193 Mike C. Fletcher	2009-07-06
+      Use Python 2.4+ format_exc instead of custom function when available
+
+  192 Mike C. Fletcher	2009-07-06
+      Add OpenGL_accelerate to the document modules
+
+  191 Mike C. Fletcher	2009-07-06
+      Add __repr__ and __doc__ attributes for better pydoc output
+
+  190 Mike C. Fletcher	2009-07-06
+      Get more tests passing with error-on-copy
+
+  189 Mike C. Fletcher	2009-07-06
+      Use raw ctypes instead of array-based conversion (avoids errors when error on copy)
+
+  188 Mike C. Fletcher	2009-07-06
+      Make the code to retrieve (and cache) GL version a separate function for use in tests and the like.
+      Rename tests.py to test_core.py
+
+  187 Mike C. Fletcher	2009-07-05
+      Add a convenience module with imports of the common shader functions defined with ARB alternate fallback code.
+
+  186 Mike C. Fletcher	2009-07-05
+      Add SIZE_1_ARRAY_UNPACK flag to top-level in order to configure array-unpacking behaviour
+
+  185 Mike C. Fletcher	2009-07-05
+      Do info-level logging on which extensions/alternates are being chosen.
+
+  184 Mike C. Fletcher	2009-06-29 [merge]
+      Merging GLUT error checking, wrapper fixes, version declaration etc.
+
+  183 Mike C. Fletcher	2009-06-29
+      Updated generated c file
+
+  182 Mike C. Fletcher	2009-06-25
+      Use simpler, but non-optimizable versions of query calls
+
+  181 Mike C. Fletcher	2009-06-25
+      Remove old attempts to delete to work around
+
+  180 Mike C. Fletcher	2009-06-24
+      Bug #289925 Disable GLUT error checking on all platforms.  Some platform's GL (imo incorrectly) generates segfaults if you do a gl error check before a context has been created.  Mostly 64-bit linux affected, though there are further restrictions to the set (i.e. you have to be using particular drivers)
+
+  179 Mike C. Fletcher	2009-06-24
+      Eliminate name with "test" in it so that nose can discover tests and run all of them
+
+  178 Mike C. Fletcher	2009-06-21
+      Always specify tight packing so that naive Python code won't run into alignment issues
+
+  177 Mike C. Fletcher	2009-05-11
+      Fix the version, we aren't on release for 3.0.1 yet!
+
+  176 Mike C. Fletcher	2009-05-11
+      Test for glut init bug
+
+  175 Mike C. Fletcher	2009-05-11
+      Launchpad bug #289925 Sourceforge bug #1737282 certain (broken, IMO) implementations do not allow calls to glGetError before the context is created.  glutInit functions tend to be called before the glutWindow call, so on those implementations we can see segfaults.  Work-around is to disable error-checking on the glutInit calls, which *should not* cause problems, as they shouldn't be doing anything at the GL level (whereas other GLUT calls only failure notice is from GL error reports).
+
+  174 Mike C. Fletcher	2009-05-11
+      Resize the drawing area during callback
+
+  173 Mike C. Fletcher	2009-05-03
+      Silence warnings (correctness problem), thought intptr_t was a pointer already, appears to just mean "something that can hold a pointer"
+
+  172 Mike C. Fletcher	2009-05-03
+      Add docstrings for vbos
+
+  171 Mike C. Fletcher	2009-05-03
+      Incref/decref data instance and use Py_X*REF functions to allow for NULLs
+
+  170 Mike C. Fletcher	2009-05-03
+      Fix refcount bug in vbo implementation
+
+  169 Mike C. Fletcher	2009-05-01
+      Nones format handler added.
+      VBO format handlers converted to C-API.
+      Warnings logged when failure to import particular modules after success of OpenGL_accelerate import.
+      Small bug-fix for zeros where a lookup function might pass an integer instead of a tuple.
+      Some more tests for array handlers.
+
+  168 Mike C. Fletcher	2009-05-01
+      Beginning breakout of formathandler into C and Python APIs
+
+  167 Mike C. Fletcher	2009-05-01
+      Wrapper declarations continuing to develop
+
+  166 Mike C. Fletcher	2009-05-01
+      Get most of the wrapper helper objects using C-level API for communication
+
+  165 Mike C. Fletcher	2009-05-01
+      Fix performance test to be less aggressive, fix some numpy accel tests
+
+  164 Mike C. Fletcher	2009-04-30
+      Beginning of work to eliminate python-call overhead between accelerator modules
+
+  163 Mike C. Fletcher	2009-04-30
+      Beginning to create formalized inter-module API
+
+  162 Mike C. Fletcher	2009-04-30
+      Declaration is external, implementation is still local
+
+  161 Mike C. Fletcher	2009-04-30
+      Log for imports as well
+
+  160 Mike C. Fletcher	2009-04-30
+      Bump version
+
+  159 Mike C. Fletcher	2009-04-30
+      Beginning to create direct-access paths for the C-coded helper methods
+
+  158 Mike C. Fletcher	2009-04-30
+      Ignore the downloaded glext.h header
+
+  157 Mike C. Fletcher	2009-04-30
+      Add a bit of a doc-string
+
+  156 Mike C. Fletcher	2009-04-30
+      Ignore the downloaded .txt files for the extension definitions
+
+  155 Mike C. Fletcher	2009-04-30
+      Minor change to array datatype to make code more explicit about what typecode is used.
+
+  154 Mike C. Fletcher	2009-04-30
+      Minor rearrangement for performance in the wrapper operation
+
+  153 Mike C. Fletcher	2009-04-30
+      Regenerated
+
+  152 Mike C. Fletcher	2009-04-30
+      Check for c array type instead of unconditionally converting
+
+  151 Mike C. Fletcher	2009-04-30
+      Load handler from plugin, load all format handlers on array data type init
+
+  150 Mike C. Fletcher	2009-04-29
+      Fix yet more regressions in the python-coded version
+
+  149 Mike C. Fletcher	2009-04-29
+      Load plugin target as handler
+
+  148 Mike C. Fletcher	2009-04-29
+      More problems with the pure-python wrapper module
+
+  147 Mike C. Fletcher	2009-04-29
+      Allow None, as is valid quite often
+
+  146 Mike C. Fletcher	2009-04-29
+      Make numpy module require a valid GL data-type specifier for various lookups
+
+  145 Mike C. Fletcher	2009-04-29
+      Error in one of the wrapper expansions fixed.
+
+  144 Mike C. Fletcher	2009-04-29
+      Support for overriding vbo implementation
+
+  143 Mike C. Fletcher	2009-04-29
+      VBO implementation (not very fast currently)
+
+  142 Mike C. Fletcher	2009-04-29
+      More helper functions converted to cython, other than VBOs not seeing much Pythonic code in current tests
+
+  141 Mike C. Fletcher	2009-04-29
+      Regnerated wrappers
+
+  140 Mike C. Fletcher	2009-04-29
+      Updated wrapper build
+
+  139 Mike C. Fletcher	2009-04-29
+      Provide a c-level call so we can avoid Python-call overhead for the wrapper objects
+
+  138 Mike C. Fletcher	2009-04-29
+      Make the setup of cython extensions easier, make the error handler overridable by Cython version
+
+  137 Mike C. Fletcher	2009-04-29
+      Regenerated
+
+  136 Mike C. Fletcher	2009-04-29
+      Error-checker cython optimized version
+
+  135 Mike C. Fletcher	2009-04-29
+      Add test suite for array data type
+
+  134 Mike C. Fletcher	2009-04-29
+      Changes to support accelerated array data type and format handler along with some refactoring
+
+  133 Mike C. Fletcher	2009-04-29
+      Make from_param less forgiving so that it doesn't wind up creating segfaults
+
+  132 Mike C. Fletcher	2009-04-29
+      Eliminate POINTER( arrayType ) references, as array types are not necessarily pointer instances any more
+
+  131 Mike C. Fletcher	2009-04-29
+      Use an array when doing vbo deletion
+
+  130 Mike C. Fletcher	2009-04-29
+      Use accelerated versions of some common converters where possible
+
+  129 Mike C. Fletcher	2009-04-29
+      Working output and sized output types, call registerEquivalent on formathandlers when we find an equivalent
+
+  128 Mike C. Fletcher	2009-04-29
+      To avoid issues with passing the value back and forth to Python need to make the c_void_p explicitly :( 
+
+  127 Mike C. Fletcher	2009-04-29
+      Add the arraydatatype extension
+
+  126 Mike C. Fletcher	2009-04-29
+      Cython'd version of format handler
+
+  125 Mike C. Fletcher	2009-04-29
+      Register via the registry rather than setting value explicitly
+
+  124 Mike C. Fletcher	2009-04-29
+      Make char ** work out properly even if the array data type isn't a pointer-type sub-class
+
+  123 Mike C. Fletcher	2009-04-29
+      Move registry to arraydatatype, add a getPyArgName accelerator
+
+  122 Mike C. Fletcher	2009-04-29
+      Array datatype Cython implementation
+
+  121 Mike C. Fletcher	2009-04-28
+      Always register with the global type handler
+
+  120 Mike C. Fletcher	2009-04-28
+      Remove unused typedPointer helper
+
+  119 Mike C. Fletcher	2009-04-28
+      Enable full Cython-optimized version of numpy handler
+
+  118 Mike C. Fletcher	2009-04-28
+      Always return the same void-pointer object
+
+  117 Mike C. Fletcher	2009-04-28
+      Updated wrapper
+
+  116 Mike C. Fletcher	2009-04-28
+      Use C-level API to try to speed up slightly
+
+  115 Mike C. Fletcher	2009-04-28
+      Handle forced (lossy) conversions as well
+
+  114 Mike C. Fletcher	2009-04-28
+      Cleanup of the format handler accel
+
+  113 Mike C. Fletcher	2009-04-28
+      Make from_param simpler (use int instead of c_void_p as the return type)
+
+  112 Mike C. Fletcher	2009-04-28
+      Eliminate reference-counting error for numpy dtypes
+
+  111 Mike C. Fletcher	2009-04-27
+      C-level wrapper now appears to be working, save that we're getting free errors on small integers :( 
+
+  110 Mike C. Fletcher	2009-04-27
+      Add unitSize calculation
+
+  109 Mike C. Fletcher	2009-04-27
+      Tests for c-level numpy format handler
+
+  108 Mike C. Fletcher	2009-04-27
+      Reworking the format handler interface as a fully-cython-ized version
+
+  107 Mike C. Fletcher	2009-04-27
+      Sigh, no, too aggressive in the optimizations there, ascontiguous is still needed to force contiguity
+
+  106 Mike C. Fletcher	2009-04-27
+      More optimization points for the array-helper scripts
+
+  105 Mike C. Fletcher	2009-04-26
+      Add flag to disable array-size checking
+
+  104 Mike C. Fletcher	2009-04-26
+      Some very minor performance improvements for numpy handler
+
+  103 Mike C. Fletcher	2009-04-26
+      eliminate duplicate setting of array data-type handler for each array-data-type sub-class
+
+  102 Mike C. Fletcher	2009-04-26
+      Minor performance speedup for numpy module by using array() instead of the legacy ascontiguous call
+
+  101 Mike C. Fletcher	2009-04-26
+      Regenerated again (no changes of note)
+
+  100 Mike C. Fletcher	2009-04-26
+      Regenerated Cython wrappers with Python 2.6 and Cython 0.10.3
+
+   99 Mike C. Fletcher	2009-04-09
+      Allow long offsets for vbo convenience offset calculation
+
+   98 Mike C. Fletcher	2009-04-09
+      Eliminate most usage of cResolver from the wrappers, now relies on from_param operations on all data-types for C-compatable-arg-to-C-types-arg conversions.  There are still a few "special" handlers such as shader source that use cResolvers.
+
+   97 Mike C. Fletcher	2009-04-09
+      Fix from_param to return a c_void_p, not a bald integer/long
+
+   96 Mike C. Fletcher	2009-04-09
+      Fix missing import in vbo module
+
+   95 Mike C. Fletcher	2009-04-09
+      Make c_void_p references generic ArrayDataType types, to allow for from_param to handle conversions
+
+   94 Mike C. Fletcher	2009-04-09
+      Properly handle c_void_p/c_char_p/c_wchar_p when passed as array-data pointers to from_param of array data types, these pointer types are _SimpleData instances rather than _Pointer instances.
+
+   93 Mike C. Fletcher	2009-04-09
+      numpy arrays can't use bool( array ) any more
+
+   92 Mike C. Fletcher	2009-04-08
+      Add STORE_POINTERS flag to enable/disable storage of (temporary) pointers
+      Update documentation for flags in __init__
+
+   91 Mike C. Fletcher	2009-04-08
+      Make the error message more verbose/friendly
+
+   90 Mike C. Fletcher	2009-04-08
+      Add ERROR_ON_COPY support for lists/tuples.
+
+   89 Mike C. Fletcher	2009-04-04
+      Bug report from Ivo Ugrina that gluNurbs operations were not rejecting invalid parameters, there doesn't seem to be any error checking in *my* glu implementation, but apparently there should be.  Anyway, we now use OpenGL.ERROR_CHECKING to control a number of checks that implement the checks Ivo says were present in PyOpenGL 2.x (modelled on SGI implementation, I'm guessing).
+
+   88 Mike C. Fletcher	2009-04-01 {release-3.0.0}
+      Moving the development documentation to the website
+
+Use --include-merges or -n0 to see merged revisions.
